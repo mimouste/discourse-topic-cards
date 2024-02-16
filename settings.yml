@@ -1,0 +1,19 @@
+blog_style_categories:
+  type: list
+  list_type: category
+  default: ""
+
+blog_style_tags:
+  type: list
+  list_type: tag
+  default: ""
+
+list_style_categories:
+  type: list
+  list_type: category
+  default: ""
+
+list_style_tags:
+  type: list
+  list_type: tag
+  default: ""

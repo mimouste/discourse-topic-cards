@@ -1,0 +1,3 @@
+en:
+  theme_metadata:
+    description: "A dicourse component to display the topic list in card format, with thumbnails where available."
