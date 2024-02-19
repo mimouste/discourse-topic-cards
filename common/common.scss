@@ -51,7 +51,8 @@
     }
   }
 
-  .posters {
+  .posters,
+  .topic-card__tags {
     display: none;
   }
 
@@ -81,23 +82,22 @@
 
     .link-top-line {
       grid-area: title;
+    }
 
-      .title {
-        color: var(--primary) !important;
-        font-weight: bold;
-        padding: 0;
-        //limit title to 2 lines
-        line-height: 1.4em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        max-height: 2.8em; //calc((var(--line-height-large) * 2) em;
+    .title {
+      font-weight: bold;
+      padding: 0;
+      //limit title to 2 lines
+      line-height: 1.4em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      max-height: 2.8em; //calc((var(--line-height-large) * 2) em;
 
-        &:hover {
-          text-decoration: underline;
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
 
