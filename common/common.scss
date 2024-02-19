@@ -1,3 +1,6 @@
+:root {
+  --d-border-radius-large: 20px;
+}
 //list
 .topic-list.topic-thumbnails-list {
   display: block;
@@ -52,6 +55,8 @@
       .main-thumbnail {
         max-height: 100%;
         object-fit: cover;
+        border-top-left-radius: var(--d-border-radius-large);
+        border-bottom-left-radius: var(--d-border-radius-large);
       }
     }
   }
@@ -66,7 +71,7 @@
       "metadata metadata";
     grid-template-rows: auto auto 1fr auto auto;
     flex-grow: 1;
-    padding: 1rem 0 !important;
+    padding: 1rem 1.5rem 1rem 0 !important;
     box-sizing: border-box;
 
     .link-top-line {
@@ -89,7 +94,7 @@
 
     .link-bottom-line {
       grid-area: tags;
-      margin: 0;
+      margin-bottom: 0.75rem;
 
       .badge-wrapper {
         display: none;
