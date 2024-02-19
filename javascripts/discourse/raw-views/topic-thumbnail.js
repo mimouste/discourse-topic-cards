@@ -1,46 +1,11 @@
 import discourseComputed from "discourse-common/utils/decorators";
 import EmberObject from "@ember/object";
-import { inject as service } from "@ember/service";
-import { and } from "@ember/object/computed";
-import { tracked } from "@glimmer/tracking";
 
 export default EmberObject.extend({
-  topicListThumbnailService: service("topic-list-thumbnail"),
-
-  shouldDisplay: "topicListThumbnailService.shouldDisplay",
-
-  // shouldDisplay: and(
-  //   "topicListThumbnailsService.shouldDisplay"
-  //   // "enabledForOutlet"
-  // ),
-
-  // Make sure to update about.json thumbnail sizes if you change these variables
-  @discourseComputed("topicListThumbnailService.displayList")
-  displayWidth(displayList) {
-    return displayList ? settings.list_thumbnail_size : 400;
-  },
-
   responsiveRatios: [1, 1.5, 2],
-
-  // @discourseComputed(
-  //   "location",
-  //   "topicListThumbnailService.displayList",
-  //   "topicListThumbnailService.displayBlogStyle"
-  // )
-  // enabledForOutlet(location, displayList, displayBlogStyle) {
-  //   console.log(displayList, location);
-  //   if (displayBlogStyle && location === "before-columns") {
-  //     return true;
-  //   }
-  //   if (displayList && location === "before-link") {
-  //     return true;
-  //   }
-  //   return false;
-  // },
 
   @discourseComputed("topic.thumbnails")
   hasThumbnail(thumbnails) {
-    console.log(thumbnails);
     return !!thumbnails;
   },
 
@@ -99,7 +64,6 @@ export default EmberObject.extend({
 
   @discourseComputed("topic")
   url(topic) {
-    console.log(topic);
     return topic.linked_post_number
       ? topic.urlForPostNumber(topic.linked_post_number)
       : topic.get("lastUnreadUrl");

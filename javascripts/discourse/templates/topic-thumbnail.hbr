@@ -1,20 +1,11 @@
 {{! template-lint-disable deprecated-inline-view-helper }}
-{{#if view.shouldDisplay}}
   {{#if view.hasThumbnail}}
-    <div class="topic-list-card has-thumbnail {{#if view.isLandscape}}landscape{{/if}}">
+    <div class="topic-card__thumbnail">
   {{else}}
-    <div class="topic-list-card no-thumbnail">
+    <div class="no-thumbnail">
   {{/if}}
       <a href="{{view.url}}">
         {{#if view.hasThumbnail}}
-          <img
-            class="background-thumbnail"
-            src="{{view.fallbackSrc}}"
-            srcset="{{view.srcSet}}"
-            width={{view.width}}
-            height={{view.height}}
-            loading="lazy"
-          >
           <img
             class="main-thumbnail"
             src="{{view.fallbackSrc}}"
@@ -23,44 +14,7 @@
             height={{view.height}}
             loading="lazy"
           >
-        {{else}}
-          <div class="thumbnail-placeholder">
-            {{d-icon-image}}
-          </div>
         {{/if}}
       </a>
   </div>
 
-  {{#if view.topicThumbnailsService.showLikes}}
-    <div class="topic-thumbnail-likes">
-      {{d-icon "heart"}}
-      <span class="number">
-        {{view.topic.like_count}}
-      </span>
-    </div>
-  {{/if}}
-
-  {{#if view.topicThumbnailsService.displayBlogStyle}}
-    <div class="topic-thumbnail-blog-data">
-      <div class="topic-thumbnail-blog-data-views">
-        {{d-icon "eye"}}
-        <span class="number">
-          {{view.topic.views}}
-        </span>
-      </div>
-      <div class="topic-thumbnail-blog-data-likes">
-        {{d-icon "heart"}}
-        <span class="number">
-          {{view.topic.like_count}}
-        </span>
-      </div>
-      <div class="topic-thumbnail-blog-data-comments">
-        {{d-icon "comment"}}
-        <span class="number">
-          {{view.topic.reply_count}}
-        </span>
-      </div>
-      {{raw "list/activity-column" topic=view.topic class="topic-thumbnail-blog-data-activity" tagName="div"}}
-    </div>
-  {{/if}}
-{{/if}}
