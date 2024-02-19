@@ -1,0 +1,11 @@
+<div class="topic-card__metadata">
+  <span class="topic-list-metadata__metric-timestamp-text">
+    {{theme-i18n "published"}}
+    {{format-date view.topic.createdAt format="medium-with-ago"}}
+    {{theme-i18n "in"}}
+    {{category-link view.topic.category}}
+  </span>
+
+  {{view.topic.like_count}}
+  {{d-icon "heart"}}
+</div>

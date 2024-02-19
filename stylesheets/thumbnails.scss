@@ -1,38 +1,3 @@
-@import "thumbnails";
-
-//hiding core elements
-.num {
-  &.posts,
-  &.views,
-  &.activity {
-    display: none;
-  }
-}
-
-.link-bottom-line .badge-category__wrapper,
-.posters {
-  display: none;
-}
-.has-thumbnail {
-  // background: var(--primary-low);
-  // position: relative;
-  // float: left;
-  // margin-right: 10px;
-  // width: 140px;
-  // height: 100px;
-  // overflow: hidden;
-
-  &.landscape {
-    .background-thumbnail {
-      display: none;
-    }
-    .main-thumbnail {
-      max-height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-
 .topic-list.topic-thumbnails-list .topic-list-body {
   border-top: 0;
 }
@@ -174,22 +139,23 @@
     display: block;
   }
 
+  //regular items, without displayed image
   .topic-list-item {
     position: relative;
-    max-height: 200px;
 
     .main-link {
       display: grid;
       grid-template-areas:
-        "tags tags"
-        "title title"
-        "op op"
-        "metadata likes";
+        "image tags"
+        "image title"
+        "image content"
+        "image metadata";
       grid-template-columns: auto 1fr;
       grid-template-rows: auto auto 1fr auto;
       column-gap: 1.5rem;
       row-gap: 0.5rem;
       padding: 1.5rem 1.5rem 1.5rem 0;
+      max-height: 250px;
       box-sizing: border-box;
 
       .topic-list-thumbnail {
@@ -219,15 +185,6 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         margin-block: 0;
-      }
-    }
-
-    .topic-card {
-      &__op {
-        grid-area: op;
-      }
-      &__metadata {
-        grid-area: metadata;
       }
     }
 

@@ -3,12 +3,6 @@ import Service, { inject as service } from "@ember/service";
 import Site from "discourse/models/site";
 import discourseComputed from "discourse-common/utils/decorators";
 
-console.log(
-  settings.list_style_categories,
-  settings.blog_style_categories,
-  settings.list_style_tags,
-  settings.blog_style_tags
-);
 const listCategories = settings.list_style_categories
   .split("|")
   .map((id) => parseInt(id, 10));
@@ -86,7 +80,7 @@ export default class TopicThumbnailService extends Service {
 
   @discourseComputed("displayMode")
   enabledForRoute(displayMode) {
-    return displayMode !== "none";
+    return displayMode !== "none"; //true
   }
 
   // @discourseComputed()
@@ -96,12 +90,12 @@ export default class TopicThumbnailService extends Service {
 
   @discourseComputed("enabledForRoute")
   shouldDisplay(enabledForRoute) {
-    return enabledForRoute;
+    return enabledForRoute; //true
   }
 
   @discourseComputed("shouldDisplay", "displayMode")
   displayList(shouldDisplay, displayMode) {
-    return shouldDisplay && displayMode === "list";
+    return shouldDisplay && displayMode === "list"; //true
   }
 
   @discourseComputed("shouldDisplay", "displayMode")

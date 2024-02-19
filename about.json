@@ -1,8 +1,16 @@
 {
   "about_url": "TODO: Put your theme's public repo or Meta topic URL here",
   "license_url": "TODO: Put your theme's LICENSE URL here",
-  "assets": {
-  },
+  "assets": {},
   "name": "Discourse Topic List Cards",
-  "component": true
+  "component": true,
+  "modifiers": {
+    "topic_thumbnail_sizes": [
+      [200, 200],
+      [300, 300],
+      [400, 400],
+      [600, 600],
+      [800, 800]
+    ]
+  }
 }

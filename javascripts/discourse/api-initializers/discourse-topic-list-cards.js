@@ -18,7 +18,7 @@ export default {
   initWithApi(api) {
     api.modifyClass("component:topic-list", {
       pluginId: "discourse-topic-list-cards",
-      topicThumbnailsService: service("topic-list-thumbnail"),
+      topicThumbnailsService: service("topic-list-thumbnail"), //is this just to get the classnames?
       classNameBindings: [
         "isThumbnailList:topic-thumbnails-list",
         "isBlogStyleGrid:topic-thumbnails-blog-style-grid",

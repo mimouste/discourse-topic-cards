@@ -1,5 +1,4 @@
 {{! template-lint-disable deprecated-inline-view-helper }}
-HELLO
 {{#if view.shouldDisplay}}
   {{#if view.hasThumbnail}}
     <div class="topic-list-card has-thumbnail {{#if view.isLandscape}}landscape{{/if}}">
@@ -26,7 +25,7 @@ HELLO
           >
         {{else}}
           <div class="thumbnail-placeholder">
-            {{d-icon (theme-setting "placeholder_icon")}}
+            {{d-icon-image}}
           </div>
         {{/if}}
       </a>
