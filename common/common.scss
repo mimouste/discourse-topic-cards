@@ -4,6 +4,7 @@
 //list
 .topic-list.topic-thumbnails-list {
   display: block;
+  margin-top: 1.5rem;
 
   .topic-list-header {
     display: none;
@@ -47,6 +48,10 @@
   box-shadow: var(--shadow-card);
   max-height: 250px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   .has-thumbnail {
     &.landscape {
       .background-thumbnail {
@@ -73,6 +78,7 @@
     flex-grow: 1;
     padding: 1rem 1.5rem 1rem 0 !important;
     box-sizing: border-box;
+    border: 0 !important;
 
     .link-top-line {
       grid-area: title;
@@ -89,6 +95,10 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         max-height: 2.8em; //calc((var(--line-height-large) * 2) em;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -140,5 +150,14 @@
         }
       }
     }
+  }
+}
+
+//hover
+.topic-list-item:has(.topic-card__excerpt:hover),
+.topic-list-item:has(.topic-card__metadata:hover),
+.topic-list-item:has(.topic-card__likes:hover) {
+  .main-link .title {
+    text-decoration: underline;
   }
 }
