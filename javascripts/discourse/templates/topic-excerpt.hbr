@@ -1,3 +1,5 @@
-<div class="topic-excerpt">
-  {{dir-span view.topic.escapedExcerpt htmlSafe="true"}}
+<div class="topic-card__excerpt">
+  <div class="topic-card__excerpt-text">
+    {{dir-span view.topic.escapedExcerpt htmlSafe="true"}}
+  </div>
 </div>
