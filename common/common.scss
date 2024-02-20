@@ -36,7 +36,7 @@
   border-radius: var(--d-border-radius-large);
   background-color: var(--secondary);
   box-shadow: var(--shadow-card);
-  max-height: 250px;
+  max-height: 200px;
 
   &:hover {
     cursor: pointer;
@@ -68,8 +68,11 @@
 
   //new elements styling
   &__thumbnail {
+    flex: 0 0 30%;
+    max-width: 450px;
     .main-thumbnail {
-      max-height: 100%;
+      height: 100%;
+      width: 100%;
       object-fit: cover;
       border-top-left-radius: var(--d-border-radius-large);
       border-bottom-left-radius: var(--d-border-radius-large);
@@ -89,6 +92,10 @@
     padding: 1rem 1.5rem 1rem 0 !important;
     box-sizing: border-box;
     border: 0 !important;
+
+    .topic-excerpt {
+      display: none; //hide default excerpt from pinned topics
+    }
 
     .link-top-line {
       grid-area: title;
