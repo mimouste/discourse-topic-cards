@@ -16,11 +16,8 @@
     width: 100%;
     gap: 1em;
     border-top: 0;
-    tr {
-      border-bottom: 0;
-    }
-    .topic-list-item td:first-child {
-      border: 0 !important;
+    .after-topic-list-item-outlet {
+      border: 0;
     }
   }
 
@@ -36,10 +33,19 @@
   border-radius: var(--d-border-radius-large);
   background-color: var(--secondary);
   box-shadow: var(--shadow-card);
-  max-height: 200px;
+  border: 1px solid transparent;
+
+  td:first-child {
+    border: 0 !important;
+  }
+
+  &:has(.topic-card__thumbnail) {
+    max-height: 210px;
+  }
 
   &:hover {
     cursor: pointer;
+    border: 1px solid var(--primary-low);
 
     .title {
       text-decoration: underline;
@@ -70,6 +76,7 @@
   &__thumbnail {
     flex: 0 0 30%;
     max-width: 450px;
+    max-height: 100%;
     .main-thumbnail {
       height: 100%;
       width: 100%;
