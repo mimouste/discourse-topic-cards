@@ -57,5 +57,9 @@
       float: none;
       align-self: center;
     }
+
+    .title {
+      grid-area: title;
+    }
   }
 }
