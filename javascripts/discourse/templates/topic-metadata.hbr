@@ -5,7 +5,7 @@
   </span>
 
   <span class="topic-card__likes">
-    {{view.topic.like_count}}
+    <span class="topic-card__likes-number">{{view.topic.like_count}}</span>
     {{d-icon "heart"}}
   </span>
 </div>
