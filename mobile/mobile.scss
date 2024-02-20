@@ -38,7 +38,7 @@
     display: grid;
     grid-template-areas:
       "tags tags"
-      "title title"
+      "status title"
       "excerpt excerpt"
       "op op"
       "metadata metadata";
@@ -46,9 +46,14 @@
     width: 100%;
     padding: 0 !important;
 
-    .title,
+    &:first-child {
+      grid-template-columns: auto 1fr;
+    }
+
     .topic-statuses {
-      grid-area: title;
+      grid-area: status;
+      float: none;
+      align-self: center;
     }
   }
 }

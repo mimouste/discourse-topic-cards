@@ -40,6 +40,16 @@
 
   &:hover {
     cursor: pointer;
+
+    .title {
+      text-decoration: underline;
+    }
+  }
+
+  &:has(.topic-card__op a:hover) {
+    .main-link .title {
+      text-decoration: none;
+    }
   }
 
   //hiding core elements
@@ -84,6 +94,9 @@
       grid-area: title;
       display: flex;
       align-items: center;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .title {
@@ -98,10 +111,6 @@
       -webkit-box-orient: vertical;
       max-height: 2.8em; //calc((var(--line-height-large) * 2) em;
       padding: 0 !important;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
 
     .link-bottom-line {
@@ -152,14 +161,5 @@
         }
       }
     }
-  }
-}
-
-//hover
-.topic-list-item:has(.topic-card__excerpt:hover),
-.topic-list-item:has(.topic-card__metadata:hover),
-.topic-list-item:has(.topic-card__likes:hover) {
-  .main-link .title {
-    text-decoration: underline;
   }
 }

@@ -21,10 +21,11 @@ export default class extends Component {
       "topic-card__excerpt-text",
       "topic-card__metadata",
       "topic-card__likes",
+      "topic-card__op",
     ];
 
     if (this.site.mobileView) {
-      clickTargets.push("topic-item-metadata", "topic-item-stats");
+      clickTargets.push("topic-item-metadata");
     }
 
     if (clickTargets.some((t) => targetElement.classList.contains(t))) {
