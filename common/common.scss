@@ -168,8 +168,15 @@
         max-height: 3.3em;
       }
       &__likes {
-        color: var(--primary);
-        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 0.25em;
+        &-number {
+          color: var(--love);
+          font-weight: bold;
+          font-size: var(--font-down-1-rem);
+        }
+
         .d-icon {
           color: var(--love);
         }
