@@ -1,3 +1,4 @@
+{{!-- has-modern-replacement --}}
 <div class="topic-card__metadata">
   {{#if (theme-setting 'show_publish_date')}}
     <span class="topic-card__publish-date">
