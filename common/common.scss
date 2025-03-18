@@ -19,13 +19,16 @@
     .after-topic-list-item-outlet {
       border: 0;
     }
+    
   }
 
   .topic-list-item-separator td {
     display: block;
   }
 }
-
+.topic-list-main-link {
+  font-size: 1rem;
+}
 //card
 .topic-card {
   display: flex;
