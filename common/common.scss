@@ -30,7 +30,7 @@
 .topic-card {
   display: flex;
   gap: 1.5rem;
-  border-radius: none;
+  border-radius: 0;
   background-color: var(--secondary);
   box-shadow: 3px 3px 0 var(--primary);
   border: 1px solid var(--primary);
@@ -38,7 +38,8 @@
   &:hover,
   &.selected {
     cursor: pointer;
-    border: 1px solid var(--primary-low);
+    border: 1px solid var(--tertiary);
+    box-shadow: 3px 3px 0 var(--tertiary);
 
     .title {
       text-decoration: underline;
