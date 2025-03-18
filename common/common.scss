@@ -32,8 +32,8 @@
   gap: 1.5rem;
   border-radius: var(--d-border-radius-large);
   background-color: var(--secondary);
-  box-shadow: var(--shadow-card);
-  border: 1px solid transparent;
+  box-shadow: 3px 3px 0 var(--primary);
+  border: 1px solid var(--primary);
 
   &:hover,
   &.selected {
